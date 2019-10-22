@@ -24,7 +24,7 @@
 
                 <!-- Icon -->
                 <div class="fadeIn first">
-                    <h2>Login</h2>
+                    <h2 class="login-title">Login</h2>
                 </div>
 
                 <!-- Login Form -->

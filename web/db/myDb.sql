@@ -1,0 +1,15 @@
+CREATE TABLE public.users
+(
+	id SERIAL NOT NULL PRIMARY KEY,
+	username VARCHAR(100) NOT NULL UNIQUE,
+	password VARCHAR(100) NOT NULL,
+	email VARCHAR(100) NOT NULL UNIQUE
+);
+
+CREATE TABLE public.notes
+(
+	id SERIAL NOT NULL PRIMARY KEY,
+	user_id INT NOT NULL REFERENCES public.users(id),
+	notes_text TEXT NOT NULL,
+	DT DATE,
+);

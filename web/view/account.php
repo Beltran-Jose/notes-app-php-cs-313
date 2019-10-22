@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>account</title>
     <link rel="stylesheet" href="/styles/login-styles.css">
 
     <!-- Bootstrap CSS -->
@@ -18,35 +18,7 @@
 <body>
     <header></header>
     <main>
-        <div class="wrapper fadeInDown">
-            <div id="formContent">
-                <!-- Tabs Titles -->
-
-                <!-- Icon -->
-                <div class="fadeIn first">
-                    <h2 class="login-title">nota app</h2>
-                </div>
-
-                <!-- Login Form -->
-                <form action="/account/index.php" method="POST">
-
-                    <input type="text" id="login" class="fadeIn second" name="login" placeholder="login">
-                    <input type="text" id="password" class="fadeIn third" name="login" placeholder="password">
-                    
-                    <input type="submit" class="fadeIn fourth" value="Log In">
-                    <input type="hidden" name="action" value="login">
-                    
-                </form>
-
-                <!-- Remind Passowrd -->
-                <div id="formFooter">
-                    <a class="underlineHover" href="#">Forgot Password?</a>
-                    <br>
-                    <a href="#" class="underlineHover">Register</a>
-                </div>
-
-            </div>
-        </div>
+        <h3>account page</h3>
     </main>
     <footer></footer>
 

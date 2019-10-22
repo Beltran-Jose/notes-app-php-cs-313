@@ -13,7 +13,8 @@ if ($action == NULL) {
 
 switch ($action) {
     case 'login':
-          header('Location: /view/account.php');
+        include '../view/account.php';
+        //   header('Location: /view/account.php');
         break;
 
     default:

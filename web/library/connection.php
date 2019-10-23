@@ -1,4 +1,6 @@
 <?php
+
+$connectionFile = '<p class="notice">db file correct.</p>';
     /*Function for connecting to the database. Rather than needing every page to connect*/
     function connect_db() {
         $db == NULL;
@@ -18,5 +20,6 @@
             die();
         }
         return $db;
+        $connectionFunction = '<p class="notice">connection function ran</p>';
     } 
 ?>

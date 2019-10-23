@@ -51,6 +51,7 @@
     <footer>
         <?php
             echo $message;
+            echo $connectionFile;
         ?>
     </footer>
 

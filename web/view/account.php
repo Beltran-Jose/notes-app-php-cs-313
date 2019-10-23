@@ -21,7 +21,9 @@
         <h3>account page</h3>
 
         <?php 
-            echo $message;
+            echo $connectionFunction;
+            echo $_SESSION['clientData']['username'];
+            echo $_SESSION['clientData']['email'];
         ?>
     </main>
     <footer></footer>

@@ -2,6 +2,7 @@
 
     require_once '../library/connection.php';
     require_once '../library/function.php';
+    require_once '../model/use-model.php';
 
     // Create or access a Session
     session_start();

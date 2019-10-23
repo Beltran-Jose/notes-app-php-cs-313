@@ -1,7 +1,7 @@
 <?php 
 
     function getClient($username) {
-        $db = notesConnect();
+        $db = connect_db();
         $sql = 'SELECT id, username, password, email
         FROM users
         WHERE username =:username';

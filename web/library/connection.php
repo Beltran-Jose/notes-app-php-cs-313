@@ -2,7 +2,6 @@
 
 function notesConnect() {
     try {
-
         $dbUrl = getenv('DATABASE_URL');
         // Get the various parts of the DB Connection from the URL
         $dbopts = parse_url($dbUrl);
@@ -21,7 +20,6 @@ function notesConnect() {
         echo 'Error!: '.$ex -> getMessage();
         die();
     }
-    return $db;
 }
 
 notesConnect();

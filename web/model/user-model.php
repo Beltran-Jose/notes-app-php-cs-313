@@ -1,5 +1,8 @@
 <?php 
 
+    require_once '../library/connection.php';
+    require_once '../library/function.php';
+
     function getClient($username) {
         $db = connect_db();
         $sql = 'SELECT id, username, password, email

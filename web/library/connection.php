@@ -1,6 +1,9 @@
 <?php
 
-$connectionFile = '<p class="notice">db file correct.</p>';
+    require_once '../library/function.php';
+    require_once '../model/use-model.php';
+
+    $connectionFile = '<p class="notice">db file correct.</p>';
     /*Function for connecting to the database. Rather than needing every page to connect*/
     function connect_db() {
         $db == NULL;

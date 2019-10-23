@@ -22,8 +22,8 @@
 
         <?php 
             echo $connectionFunction;
-            echo $_SESSION['clientData']['username'];
-            echo $_SESSION['clientData']['email'];
+            echo '<p>Welcome '.$_SESSION['clientData']['username'].'</p>';
+            echo $_SESSION['clientData'];
         ?>
     </main>
     <footer></footer>

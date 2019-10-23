@@ -42,7 +42,7 @@
 
             if ($password != $clientData['password']) {
                 $message = '<p class="notice">Please check your password and try again.</p>';
-                include 'home.php';
+                include '../home.php';
                 exit;
             }
 

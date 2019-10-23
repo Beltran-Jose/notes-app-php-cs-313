@@ -48,7 +48,11 @@
             </div>
         </div>
     </main>
-    <footer></footer>
+    <footer>
+        <?php
+            echo $message;
+        ?>
+    </footer>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

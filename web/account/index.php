@@ -18,10 +18,10 @@
         case 'login':
             $username = filter_input(INPUT_POST, 'username', FILTER_SANITIZE_EMAIL);
             $password = filter_input(INPUT_POST, 'password', FILTER_SANITIZE_STRING);
-            $passwordCheck = checkPassword($password);
+            // $passwordCheck = checkPassword($password);
 
             // Run basic checks, return if errors
-            if (empty($username) || empty($passwordCheck)) {
+            if (empty($username) || empty($password)) {
                 $message = '<p class="notice">Please provide a valid email address and password.</p>';
                 include '../index.php';
                 exit;
@@ -33,15 +33,18 @@
 
             // Compare the password just submitted against
             // the hashed password for the matching client
-            $hashCheck = password_verify($password, $clientData['password']);
-            
+
+            // $hashCheck = password_verify($password, $clientData['password']);
+
             // If the hashes don't match create an error
             // and return to the login view
-            if (!$hashCheck) {
-                $message = '<p class="notice">Please check your password and try again.</p>';
-                include '../view/login.php';
-                exit;
-            }
+
+            // if (!$hashCheck) {
+            //     $message = '<p class="notice">Please check your password and try again.</p>';
+            //     include '../view/login.php';
+            //     exit;
+            // }
+
             // A valid user exists, log them in
             $_SESSION['loggedin'] = TRUE;
             // Remove the password from the array

@@ -2,7 +2,7 @@
 
 function notesConnect() {
     try {
-        $dbUrl = getenv('DATABASE_URL');
+        $dbUrl = getenv('postgres://lqxwheqfmouasz:abb3d2f0c728b83fe256d4ce9901102b85e403cf4009d22bb026230dce526510@ec2-23-21-109-177.compute-1.amazonaws.com:5432/d9vuclponvi0cc');
         // Get the various parts of the DB Connection from the URL
         $dbopts = parse_url($dbUrl);
         $dbHost = $dbopts["host"];

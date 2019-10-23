@@ -30,9 +30,11 @@
             // A valid password exists, proceed with the login process
             // Query the client data based on the email address
             $clientData = getClient($username);
+
             // Compare the password just submitted against
             // the hashed password for the matching client
             $hashCheck = password_verify($password, $clientData['password']);
+            
             // If the hashes don't match create an error
             // and return to the login view
             if (!$hashCheck) {

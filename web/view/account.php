@@ -19,6 +19,10 @@
     <header></header>
     <main>
         <h3>account page</h3>
+
+        <?php 
+            echo $message;
+        ?>
     </main>
     <footer></footer>
 

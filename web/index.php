@@ -1,22 +1,26 @@
 <?php
-// Start the session
-session_start();
 
-// Filter the Action
-$action = filter_input(INPUT_POST, 'action');
+    require_once 'library/connection.php';
+    require_once 'library/function.php';
 
-if ($action == NULL) {
-    $action = filter_input(INPUT_GET, 'action');
-}
+    // Start the session
+    session_start();
 
-//Send to the main landing page.
-switch ($action) {
-    case 'something':
+    // Filter the Action
+    $action = filter_input(INPUT_POST, 'action');
 
-        break;
+    if ($action == NULL) {
+        $action = filter_input(INPUT_GET, 'action');
+    }
 
-    default:
-        include 'home.php';
-}
+    //Send to the main landing page.
+    switch ($action) {
+        case 'something':
+
+            break;
+
+        default:
+            include 'home.php';
+    }
 
 ?>

@@ -4,7 +4,7 @@
         $db = connect_db();
         $sql = 'SELECT id, username, password, email
         FROM users
-        WHERE username =: username ';
+        WHERE username =:username';
         $stmt = $db -> prepare($sql);
         $stmt -> bindValue(':username', $username, PDO::PARAM_STR);
         $stmt -> execute();
@@ -18,7 +18,7 @@
         $db = connect_db();
         // The SQL statement
         $sql = 'INSERT INTO users (username, password, email)
-        VALUES(: username,: password,: email)
+        VALUES(:username,:password,:email)
         ';
         // Create the prepared statement using the acme connection
         $stmt = $db -> prepare($sql);

@@ -82,7 +82,7 @@ switch ($action) {
             setcookie('firstname', $username, strtotime('+1 year'), '/');
             // $message = "<p>Thanks for registering $username. Please use your email and password to login.</p>";
             $_SESSION['message'] = "Thanks for registering $username. Please use your email and password to login.";
-            header('Location: /acme/accounts/?action=login');
+            header('Location: ../home.php');
             // include '../view/login.php';
             exit;
         } else {

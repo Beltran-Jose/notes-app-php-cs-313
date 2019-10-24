@@ -28,7 +28,7 @@
                 </div>
 
                 <!-- Login Form -->
-                <form action="/account/index.php" method="POST">
+                <form action="../account/index.php" method="POST">
 
                     <input type="text" id="login" class="fadeIn second" name="username" placeholder="login">
                     <input type="password" id="password" class="fadeIn third" name="password" placeholder="password">

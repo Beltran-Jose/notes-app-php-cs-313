@@ -52,6 +52,7 @@
         <?php
             echo $message;
             echo $connectionFile;
+            echo $_SESSION['message'];
         ?>
     </footer>
 

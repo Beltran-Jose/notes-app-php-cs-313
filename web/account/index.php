@@ -29,7 +29,6 @@
             }
 
             // A valid password exists, proceed with the login process
-            // Query the client data based on the email address
             $clientData = getClient($username);
 
             if ($password != $clientData['password']) {

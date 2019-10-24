@@ -1,6 +1,6 @@
 <?php
     require_once '../library/connection.php';
-    // require_once '../library/function.php';
+    require_once '../library/function.php';
     require_once '../model/user-model.php';
 
     // Create or access a Session

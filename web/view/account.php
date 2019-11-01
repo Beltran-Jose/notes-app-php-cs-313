@@ -39,9 +39,9 @@
                 <!-- Login Form -->
                 <form action="/notes/index.php" method="POST">
 
-                    <input type="textarea" id="notes_text" class="fadeIn second" name="notes_text" placeholder="Your note">
+                    <textarea type="textarea" id="notes_text" class="fadeIn second" name="notes_text" placeholder="Your note"></textarea>
                     
-                    <input type="submit" class="fadeIn fourth" value="Log In">
+                    <input type="submit" class="fadeIn fourth" value="Add note">
                     <input type="hidden" name="action" value="add-note">
                     
                 </form>

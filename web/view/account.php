@@ -25,6 +25,38 @@
             echo '<p>Welcome '.$_SESSION['clientData']['username'].'</p>';
             echo $_SESSION['clientData'];
         ?>
+
+<main>
+        <div class="wrapper fadeInDown">
+            <div id="formContent">
+                <!-- Tabs Titles -->
+
+                <!-- Icon -->
+                <div class="fadeIn first">
+                    <h2 class="login-title">nota app</h2>
+                </div>
+
+                <!-- Login Form -->
+                <form action="/notes/index.php" method="POST">
+
+                    <input type="textarea" id="notes_text" class="fadeIn second" name="notes_text" placeholder="Your note">
+                    
+                    <input type="submit" class="fadeIn fourth" value="Log In">
+                    <input type="hidden" name="action" value="add-note">
+                    
+                </form>
+
+                <!-- Remind Passowrd -->
+                <div id="formFooter">
+                    <a class="underlineHover" href="#">Forgot Password?</a>
+                    <br>
+                    <a href="view/register.php" class="underlineHover">Register</a>
+                </div>
+
+            </div>
+        </div>
+
+
     </main>
     <footer></footer>
 

@@ -19,18 +19,15 @@
     <header></header>
     <main>
         <h3>account page</h3>
-
-        <?php 
+        <!-- <?php 
 
             echo $connectionFunction;
             echo '<p>Welcome '.$_SESSION['clientData']['username'].'</p>';
             echo $_SESSION['clientData'];
             echo '<br>';
             echo $message;
-            echo $notes;
-            print_r($notes);
-            var_dump($notes);
-        ?>
+
+        ?> -->
 
         <main>
             <div class="wrapper fadeInDown">

@@ -86,7 +86,8 @@
                 setcookie('firstname', $username, strtotime('+1 year'), '/');
                 // $message = "<p>Thanks for registering $username. Please use your email and password to login.</p>";
                 $message = "Thanks for registering $username. Please use your email and password to login.";
-                header('Location: ../home.php');
+                include '../index.php';
+                // header('Location: ../home.php');
                 // include '../view/login.php';
             exit;
             break;

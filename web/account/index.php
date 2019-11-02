@@ -82,18 +82,13 @@
             $regOutcome = regClient($username, $password, $email);
 
             // Check and report the result
-            if ($regOutcome === 1) {
+            
                 setcookie('firstname', $username, strtotime('+1 year'), '/');
                 // $message = "<p>Thanks for registering $username. Please use your email and password to login.</p>";
-                $_SESSION['message'] = "Thanks for registering $username. Please use your email and password to login.";
+                $message = "Thanks for registering $username. Please use your email and password to login.";
                 header('Location: ../home.php');
                 // include '../view/login.php';
-                exit;
-            } else {
-                $message = "<p>Sorry $username, but the registration failed. Please try again.</p>";
-                include '../view/registration.php';
-                exit;
-            }
+            exit;
             break;
 
         default:

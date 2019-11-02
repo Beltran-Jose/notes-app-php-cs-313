@@ -38,6 +38,18 @@ switch ($action) {
         include '../view/account.php';
         break;
 
+    case 'update-note':
+        $id = filter_input(INPUT_POST, 'id', FILTER_SANITIZE_NUMBER_INT);
+        $notes_text = filter_input(INPUT_POST, 'notes_text', FILTER_SANITIZE_STRING);
+
+        $updatedNote = updateNote($id, $notes_text);
+
+        $usr = $_SESSION['clientData']['id'];
+        $notes = getNotes($usr);
+
+        include '../view/account.php';
+        break;
+
     default:
         include 'home.php';
 

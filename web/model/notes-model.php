@@ -16,8 +16,8 @@ function updateNote($id, $notes_text) {
   $db = connect_db();
   $sql = 'UPDATE notes SET notes_text = :notes_text WHERE id = :id';
   $stmt = $db->prepare($sql);
-  $stmt->bindValue(':notes_text', $notes_text, PDO::PARAM_STR);
   $stmt->bindValue(':id', $id, PDO::PARAM_INT);
+  $stmt->bindValue(':notes_text', $notes_text, PDO::PARAM_STR);
   $stmt->execute();
   $rowsChanged = $stmt->rowCount();
   $stmt->closeCursor();

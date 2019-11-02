@@ -29,9 +29,9 @@
             echo '<br>';
             echo $message;
 
-            foreach($notes as $note){
-                echo '<p>'.$note['notes_text'].'</p>';
-            }
+            // foreach($notes as $note){
+            //     echo '<p>'.$note['notes_text'].'</p>';
+            // }
         ?>
 
         <main>

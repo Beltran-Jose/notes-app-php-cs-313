@@ -25,7 +25,8 @@
             echo '<p>Welcome '.$_SESSION['clientData']['username'].'</p>';
             echo $_SESSION['clientData'];
             echo '<br>';
-            echo $_SESSION['clientData']['id'];
+            echo $message;
+            $usr_id = $_SESSION['clientData']['id'];
         ?>
 
 <main>
@@ -42,7 +43,7 @@
                 <form action="/notes/index.php" method="POST">
 
                     <textarea type="textarea" id="notes_text" class="fadeIn second" name="notes_text" placeholder="Your note"></textarea>
-                    <input type="hidden" name="user_id" value="user_id">
+                    <input type="hidden" name="user_id" value="<?php $usr_id ?>">
 
                     <input type="submit" class="fadeIn fourth" value="Add note">
                     <input type="hidden" name="action" value="add-note">

@@ -23,7 +23,7 @@ switch ($action) {
 
         if (empty($user_id) || empty($notes_text)) {
             $message = '<p class="form-error">All fields are required.</p>';
-            include '../view/product-detail.php';
+            include '../view/account.php';
             exit;
         }
 
@@ -34,10 +34,10 @@ switch ($action) {
             $itemReviews = getItemReviews($user_id);
             $reviewsDisplay = buildReviewDisplay($itemReviews);
 
-            include '../view/product-detail.php';
+            include '../view/account.php';
         } else {
             $reviewFormMessage = '<p class="form-error">Oops, something wonky happened. Please try again.</p>';
-            include '../view/product-detail.php';
+            include '../view/account.php';
         }
         break;
 

@@ -12,7 +12,7 @@ function addNote($user_id, $notes_text) {
   return $rowsChanged;
 }
 
-function udpateNote($id, $notes_text) {
+function updateNote($id, $notes_text) {
   $db = connect_db();
   $sql = 'UPDATE notes SET notes_text = :notes_text WHERE id = :id';
   $stmt = $db->prepare($sql);

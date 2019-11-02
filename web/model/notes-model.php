@@ -25,7 +25,7 @@ function deleteNote($id) {
 
 function getNotes($user_id) {
   $db = connect_db();
-  $sql = 'SELECT * FROM notes LEFT JOIN notes ON notes.user_id=users.user_id ORDER BY date DESC';
+  $sql = 'SELECT * FROM notes WHERE user_id = :user_id ORDER BY date DESC';
   $stmt = $db->prepare($sql);
   $stmt->bindValue(':user_id', $user_id, PDO::PARAM_INT);
   $stmt->execute();

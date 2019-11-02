@@ -21,7 +21,7 @@ switch ($action) {
         $user_id = filter_input(INPUT_POST, 'user_id', FILTER_SANITIZE_NUMBER_INT);
         $notes_text = filter_input(INPUT_POST, 'notes_text', FILTER_SANITIZE_STRING);
 
-        if (empty($user_id) || empty($notes_text)) {
+        if (empty($user_id)) {
             $message = '<p class="form-error">All fields are required.</p>';
             include '../view/account.php';
             exit;

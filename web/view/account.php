@@ -66,7 +66,9 @@
 
                 </div>
             </div>
+
             <?php echo include $_SERVER['DOCUMENT_ROOT'].'/common/modal-body.php';?>
+            
         </main>
         <footer></footer>
 

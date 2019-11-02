@@ -2,7 +2,7 @@
 
 function addNote($user_id, $notes_text) {
   $db = connect_db();
-  $sql = 'INSERT INTO notes (user_id, notes_text, dt) VALUES (:user_id, :notes_text)';
+  $sql = 'INSERT INTO notes (user_id, notes_text) VALUES (:user_id, :notes_text)';
   $stmt = $db->prepare($sql);
   $stmt->bindValue(':user_id', $user_id, PDO::PARAM_STR);
   $stmt->bindValue(':notes_text', $notes_text, PDO::PARAM_INT);

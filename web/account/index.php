@@ -2,6 +2,7 @@
     require_once '../library/connection.php';
     require_once '../library/function.php';
     require_once '../model/user-model.php';
+    require_once '../model/notes-model.php';
 
     // Create or access a Session
     session_start();
@@ -43,6 +44,9 @@
             $_SESSION['clientData'] = $clientData;
 
             setcookie('firstname', '', strtotime('-1 year'), '/');
+
+            $usr = $_SESSION['clientData']['id'];
+            $notes = getNotes($usr);
 
             // Send them to the account view
             include '../view/account.php';

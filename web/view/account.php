@@ -21,8 +21,6 @@
         <h3>account page</h3>
 
         <?php 
-            $usr = $_SESSION['clientData']['id'];
-            $notes = getNotes($usr);
 
             echo $connectionFunction;
             echo '<p>Welcome '.$_SESSION['clientData']['username'].'</p>';

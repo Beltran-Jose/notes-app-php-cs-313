@@ -54,7 +54,6 @@
                                 echo '<textarea readonly>'.$note['notes_text'].'</textarea>';
                             }
                         ?>
-                        <textarea readonly><?php echo $notes['notes_text'];?></textarea>
                     </form>
 
                     <div id="formFooter">

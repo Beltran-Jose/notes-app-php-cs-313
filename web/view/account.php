@@ -47,8 +47,7 @@
                         <input type="hidden" name="action" value="add-note">
 
                     </form>
-
-                    <form action="">
+                    
                         <?php
                             foreach($notes as $note){
                                 echo '<form action="/notes/index.php" method="POST">
@@ -60,7 +59,6 @@
                             }
                             // echo include $_SERVER['DOCUMENT_ROOT'].'/common/modal.php';
                         ?>
-                    </form>
 
                     <div id="formFooter">
                         <form action="/notes/index.php" method="POST">

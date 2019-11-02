@@ -14,7 +14,7 @@
         </button>
       </div>
       <div class="modal-body">
-        <?php echo $this['notes_text']; ?>
+        <?php echo $note['notes_text']; ?>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>

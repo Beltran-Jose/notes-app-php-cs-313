@@ -1,3 +1,6 @@
+<?php
+    $notes = getNotes($user_id);
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -26,6 +29,10 @@
             echo $_SESSION['clientData'];
             echo '<br>';
             echo $message;
+
+            foreach($notes as $note){
+                echo '<p>'.$note['notes_text'].'</p>';
+            }
         ?>
 
         <main>
@@ -45,6 +52,10 @@
                         <input type="submit" class="fadeIn fourth" value="Add note">
                         <input type="hidden" name="action" value="add-note">
 
+                    </form>
+
+                    <form action="">
+                        <textarea readonly></textarea>
                     </form>
 
                     <div id="formFooter">

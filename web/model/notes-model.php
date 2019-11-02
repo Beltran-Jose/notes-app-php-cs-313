@@ -12,20 +12,6 @@ function addNote($user_id, $notes_text) {
   return $rowsChanged;
 }
 
-function updateNote($user_id, $dt, $notes_text, $reviewId) {
-  $db = connect_db();
-  $sql = 'UPDATE notes SET user_id = :user_id, dt = :dt, notes_text = :notes_text WHERE reviewId = :reviewId';
-  $stmt = $db->prepare($sql);
-  $stmt->bindValue(':user_id', $user_id, PDO::PARAM_STR);
-  $stmt->bindValue(':dt', $dt, PDO::PARAM_INT);
-  $stmt->bindValue(':notes_text', $notes_text, PDO::PARAM_INT);
-  $stmt->bindValue(':reviewId', $reviewId, PDO::PARAM_INT);
-  $stmt->execute();
-  $rowsChanged = $stmt->rowCount();
-  $stmt->closeCursor();
-  return $rowsChanged;
-}
-
 function deleteNote($id) {
   $db = connect_db();
   $sql = 'DELETE FROM notes WHERE id = :id';
@@ -37,22 +23,22 @@ function deleteNote($id) {
   return $rowsChanged;
 }
 
-function getNotes($dt) {
+function getNotes($user_id) {
   $db = connect_db();
-  $sql = 'SELECT * FROM notes WHERE dt = :dt ORDER BY dt DESC';
+  $sql = 'SELECT * FROM notes WHERE user_id = :user_id ORDER BY date DESC';
   $stmt = $db->prepare($sql);
-  $stmt->bindValue(':dt', $dt, PDO::PARAM_INT);
+  $stmt->bindValue(':user_id', $user_id, PDO::PARAM_INT);
   $stmt->execute();
   $reviews = $stmt->fetchAll(PDO::FETCH_ASSOC);
   $stmt->closeCursor();
   return $reviews;
 }
 
-function getReview($reviewId) {
+function getReview($user_id) {
   $db = connect_db();
-  $sql = 'SELECT * FROM notes WHERE user_id = :user_id ORDER BY dt ASC';
+  $sql = 'SELECT * FROM notes WHERE user_id = :user_id ORDER BY date ASC';
   $stmt = $db->prepare($sql);
-  $stmt->bindValue(':reviewId', $reviewId, PDO::PARAM_INT);
+  $stmt->bindValue(':user_id', $user_id, PDO::PARAM_INT);
   $stmt->execute();
   $review = $stmt->fetch(PDO::FETCH_ASSOC);
   $stmt->closeCursor();

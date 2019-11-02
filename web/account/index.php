@@ -3,7 +3,7 @@
     require_once '../library/function.php';
     require_once '../model/user-model.php';
     require_once '../model/notes-model.php';
-
+    
     // Create or access a Session
     session_start();
 
@@ -81,14 +81,10 @@
             // Send the data to the model
             $regOutcome = regClient($username, $password, $email);
 
-            // Check and report the result
-            
-                setcookie('firstname', $username, strtotime('+1 year'), '/');
-                // $message = "<p>Thanks for registering $username. Please use your email and password to login.</p>";
-                $message = "Thanks for registering $username. Please use your email and password to login.";
-                include '../index.php';
-                // header('Location: ../home.php');
-                // include '../view/login.php';
+            setcookie('firstname', $username, strtotime('+1 year'), '/');
+            $message = "Thanks for registering $username. Please use your username and password to login.";
+            include '../index.php';
+
             exit;
             break;
 

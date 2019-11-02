@@ -149,10 +149,6 @@ html {
     color: #cccccc;
   }
   
-  .modal {
-    z-index: 100 !important;
-  }
-  
   /* ANIMATIONS */
   
   /* Simple CSS3 Fade-in-down Animation */

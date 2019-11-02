@@ -49,11 +49,13 @@
         </div>
     </main>
     <footer>
+        <div style="width: 60%; margin-left:auto; margin-right: auto; text-align:center;">
         <?php
             echo $message;
             // echo $connectionFile;
             // echo $_SESSION['message'];
         ?>
+        </div>
     </footer>
 
     <!-- Optional JavaScript -->

@@ -24,6 +24,7 @@
             echo $connectionFunction;
             echo '<p>Welcome '.$_SESSION['clientData']['username'].'</p>';
             echo $_SESSION['clientData'];
+            echo '<br>';
             echo $_SESSION['clientData']['id'];
         ?>
 

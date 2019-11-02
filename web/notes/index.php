@@ -4,6 +4,7 @@ require_once '../library/connection.php';
 require_once '../library/function.php';
 require_once '../model/user-model.php';
 require_once '../model/notes-model.php';
+require_once '../account/index.php';
 
 // Create or access a Session
 session_start();

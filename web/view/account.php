@@ -53,7 +53,7 @@
                     </form>
 
                     <form action="">
-                        <textarea readonly></textarea>
+                        <textarea readonly><?php echo $notes['notes_text'];?></textarea>
                     </form>
 
                     <div id="formFooter">

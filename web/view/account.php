@@ -1,6 +1,3 @@
-<?php
-    $notes = getNotes($user_id);
-?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -24,6 +21,8 @@
         <h3>account page</h3>
 
         <?php 
+            $notes = getNotes($_SESSION['clientData']['id']);
+
             echo $connectionFunction;
             echo '<p>Welcome '.$_SESSION['clientData']['username'].'</p>';
             echo $_SESSION['clientData'];

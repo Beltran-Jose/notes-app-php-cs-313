@@ -29,16 +29,16 @@ switch ($action) {
 
         $newNoteResult = addNote($user_id, $notes_text);
 
-        if ($newNoteResult === 1) {
+        // if ($newNoteResult === 1) {
             $message = "<p class='success-message'>The note has been added</p>";
-            $itemReviews = getItemReviews($user_id);
-            $reviewsDisplay = buildReviewDisplay($itemReviews);
+            // $itemReviews = getItemReviews($user_id);
+            // $reviewsDisplay = buildReviewDisplay($itemReviews);
 
             include '../view/account.php';
-        } else {
-            $reviewFormMessage = '<p class="form-error">Oops, something wonky happened. Please try again.</p>';
-            include '../view/account.php';
-        }
+        // } else {
+        //     $reviewFormMessage = '<p class="form-error">Oops, something wonky happened. Please try again.</p>';
+        //     include '../view/account.php';
+        // }
         break;
 
     default:

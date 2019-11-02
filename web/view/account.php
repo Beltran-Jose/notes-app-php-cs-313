@@ -51,14 +51,14 @@
                     <form action="">
                         <?php
                             foreach($notes as $note){
-                                echo '<form action="/notes/index.php" method="POST">';
-                                echo '<textarea name="notes_text">'.$note['notes_text'].'</textarea>';
-                                echo '<input type="hidden" name="id" value="'.$note['id'].'">';
-                                // echo include $_SERVER['DOCUMENT_ROOT'].'/common/modal.php';
-                                echo '<input type="submit" class="btn btn-primary" value="Update Note">';
-                                echo '<input type="hidden" name="action" value="update-note">';
-                                echo '</form>';
+                                echo '<form action="/notes/index.php" method="POST">
+                                        <textarea name="notes_text">'.$note['notes_text'].'</textarea>
+                                        <input type="hidden" name="id" value="'.$note['id'].'">
+                                        <input type="submit" class="btn btn-primary" value="Update Note">
+                                        <input type="hidden" name="action" value="update-note">
+                                      </form>';
                             }
+                            // echo include $_SERVER['DOCUMENT_ROOT'].'/common/modal.php';
                         ?>
                     </form>
 

@@ -148,6 +148,10 @@ html {
   input[type=text]:placeholder, input[type=text]:placeholder, textarea:placeholder {
     color: #cccccc;
   }
+
+  .modal-backdrop {
+    z-index: -1;
+  }
   
   /* ANIMATIONS */
   

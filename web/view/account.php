@@ -53,7 +53,7 @@
                             foreach($notes as $note){
                                 echo '<form action="/notes/index.php" method="POST">';
                                 echo '<textarea name="notes_text">'.$note['notes_text'].'</textarea>';
-                                echo '<input type="hidden" name="id" value='.$note['id'].'';
+                                echo '<input type="hidden" name="id" value="'.$note['id'].'">';
                                 // echo include $_SERVER['DOCUMENT_ROOT'].'/common/modal.php';
                                 echo '<input type="button" class="btn btn-primary" value="Update Note">';
                                 echo '<input type="hidden" name="action" value="update-note">';

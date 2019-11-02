@@ -40,10 +40,10 @@
                 </div>
 
                 <!-- Login Form -->
-                <form action="/notes/index.php" method="POST">
+                <form action="/notes/index.php" method="GET">
 
                     <textarea type="textarea" id="notes_text" class="fadeIn second" name="notes_text" placeholder="Your note"></textarea>
-                    <input type="hidden" name="user_id" value="<?php $usr_id ?>">
+                    <input type="hidden" name="user_id" value="<?php $_SESSION['clientData']['id'] ?>">
 
                     <input type="submit" class="fadeIn fourth" value="Add note">
                     <input type="hidden" name="action" value="add-note">

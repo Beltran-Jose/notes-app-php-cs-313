@@ -32,6 +32,9 @@ switch ($action) {
 
         $message = "<p class='success-message'>The note has been added</p>";
 
+        $usr = $_SESSION['clientData']['id'];
+        $notes = getNotes($usr);
+        
         include '../view/account.php';
         break;
 

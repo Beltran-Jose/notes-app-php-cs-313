@@ -19,7 +19,7 @@
     <header></header>
     <main>
         <h3>Welcome <?php echo $_SESSION['clientData']['username']; ?></h3>
-        <!-- <?php 
+        <?php 
 
             echo $connectionFunction;
             echo '<p>Welcome '.$_SESSION['clientData']['username'].'</p>';
@@ -27,7 +27,7 @@
             echo '<br>';
             echo $message;
             var_dump($notes);
-        ?> -->
+        ?> 
 
         <main>
             <div class="wrapper fadeInDown">
@@ -57,10 +57,10 @@
                                 echo '<input type="button" class="btn btn-primary" value="Update Note">';
                                 echo '<input type="hidden" name="action" value="update-note">';
                                 echo '</form>';
-                                echo '<form action="/notes/index.php" method="POST">';
-                                echo '<input type="button" class="btn btn-danger" value="Delete Note">';
-                                echo '<input type="hidden" name="action" value="delete-note">';
-                                echo '</form>';
+                                // echo '<form action="/notes/index.php" method="POST">';
+                                // echo '<input type="button" class="btn btn-danger" value="Delete Note">';
+                                // echo '<input type="hidden" name="action" value="delete-note">';
+                                // echo '</form>';
                             }
                         ?>
                     </form>

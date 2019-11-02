@@ -28,7 +28,8 @@
             echo '<br>';
             echo $message;
             echo $notes;
-
+            print_r($notes);
+            var_dump($notes);
         ?>
 
         <main>

@@ -149,7 +149,9 @@ html {
     color: #cccccc;
   }
   
-  
+  .modal {
+    z-index: 100 !important;
+  }
   
   /* ANIMATIONS */
   

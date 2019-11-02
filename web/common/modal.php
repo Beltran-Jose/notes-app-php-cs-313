@@ -1,6 +1,6 @@
 <!-- Button trigger modal -->
 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-  Launch demo modal
+  Update Your Note
 </button>
 
 <!-- Modal -->
@@ -14,7 +14,7 @@
         </button>
       </div>
       <div class="modal-body">
-        ...
+        <?php echo $this['notes_text']; ?>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>

@@ -1,12 +1,11 @@
 <?php
 
-function addNote($user_id, $notes_text, $dt) {
+function addNote($user_id, $notes_text) {
   $db = connect_db();
-  $sql = 'INSERT INTO notes (user_id, notes_text, dt) VALUES (:user_id, :notes_text, :dt)';
+  $sql = 'INSERT INTO notes (user_id, notes_text, dt) VALUES (:user_id, :notes_text)';
   $stmt = $db->prepare($sql);
   $stmt->bindValue(':user_id', $user_id, PDO::PARAM_STR);
   $stmt->bindValue(':notes_text', $notes_text, PDO::PARAM_INT);
-  $stmt->bindValue(':dt', $dt, PDO::PARAM_INT);
   $stmt->execute();
   $rowsChanged = $stmt->rowCount();
   $stmt->closeCursor();

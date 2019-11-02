@@ -18,7 +18,7 @@
 <body>
     <header></header>
     <main>
-        <h3>account page</h3>
+        <h3>Welcome <?php echo $_SESSION['clientData']['username']; ?></h3>
         <!-- <?php 
 
             echo $connectionFunction;

@@ -26,7 +26,7 @@
             echo $_SESSION['clientData'];
             echo '<br>';
             echo $message;
-
+            var_dump($notes);
         ?> -->
 
         <main>
@@ -56,6 +56,10 @@
                                 // echo include $_SERVER['DOCUMENT_ROOT'].'/common/modal.php';
                                 echo '<input type="button" class="btn btn-primary" value="Update Note">';
                                 echo '<input type="hidden" name="action" value="update-note">';
+                                echo '</form>';
+                                echo '<form action="/notes/index.php" method="POST">';
+                                echo '<input type="button" class="btn btn-danger" value="Delete Note">';
+                                echo '<input type="hidden" name="action" value="delete-note">';
                                 echo '</form>';
                             }
                         ?>

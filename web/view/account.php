@@ -27,10 +27,8 @@
             echo $_SESSION['clientData'];
             echo '<br>';
             echo $message;
+            echo $notes;
 
-            // foreach($notes as $note){
-            //     echo '<p>'.$note['notes_text'].'</p>';
-            // }
         ?>
 
         <main>

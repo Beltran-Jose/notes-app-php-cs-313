@@ -52,6 +52,7 @@
                         <?php
                             foreach($notes as $note){
                                 echo '<textarea readonly>'.$note['notes_text'].'</textarea>';
+                                include $_SERVER['DOCUMENT_ROOT'].'/web/common/modal.php';
                             }
                         ?>
                     </form>

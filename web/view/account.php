@@ -47,7 +47,7 @@
                         <input type="hidden" name="action" value="add-note">
 
                     </form>
-                    
+
                         <?php
                             foreach($notes as $note){
                                 echo '<form action="/notes/index.php" method="POST">
@@ -61,7 +61,7 @@
                         ?>
 
                     <div id="formFooter">
-                        <form action="/notes/index.php" method="POST">
+                        <form action="../index.php" method="POST">
                             <input type="submit" class="fadeIn fourth btn-danger" value="Logout">
                             <input type="hidden" name="action" value="logout">
                         </form>

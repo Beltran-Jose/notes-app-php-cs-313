@@ -31,19 +31,18 @@
                 <form action="../account/index.php" method="POST">
 
                     <input type="text" id="login" class="fadeIn second" name="username" placeholder="login" required>
-                    <input type="password" id="password" class="fadeIn third" name="password" placeholder="password" required>
+                    <input type="password" id="password" class="fadeIn third" name="password" placeholder="password"
+                        required>
                     <input type="email" id="email" class="fadeIn second" name="email" placeholder="email" required>
-                        
+
                     <input type="submit" class="fadeIn fourth" value="Register">
                     <input type="hidden" name="action" value="register">
-                    
+
                 </form>
 
                 <!-- Remind Passowrd -->
                 <div id="formFooter">
-                <form action="../index.php" method="POST">
-                            <input type="submit" class="fadeIn fourth btn-danger" value="Return to Login">
-                        </form>
+                    <a href="../index.php" class="underlineHover">Return to Login</a>
                 </div>
 
             </div>

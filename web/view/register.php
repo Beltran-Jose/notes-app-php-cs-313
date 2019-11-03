@@ -41,7 +41,9 @@
 
                 <!-- Remind Passowrd -->
                 <div id="formFooter">
-
+                <form action="../index.php" method="POST">
+                            <input type="submit" class="fadeIn fourth btn-danger" value="Return to Login">
+                        </form>
                 </div>
 
             </div>
